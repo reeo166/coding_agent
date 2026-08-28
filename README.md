@@ -1,4 +1,4 @@
-Git仓库：
+Git仓库：https://github.com/reeo166/coding_agent/tree/main
 
 这是一个从零实现的本地编程智能体，不依赖 agent 框架或云端代码执行服务。它通过 DeepSeek Chat Completions 原生 tool calling 完成多轮“模型-工具-模型”循环，并正确回传思考模式的 reasoning_content。内置读文件、列目录、文本搜索、写文件、精确替换和本地命令工具，具备上下文压缩、workspace 路径隔离、敏感文件屏蔽、超时、重试及循环上限。命令固定从 workspace 启动且不继承密钥，但它不是 OS 沙箱；只对可信任务使用 --yes。
 
