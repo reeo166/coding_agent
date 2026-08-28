@@ -4,12 +4,11 @@ Git仓库：https://github.com/reeo166/coding_agent
 
 运行环境：Python 3.10+，无第三方运行依赖。
 
-API 接入：登录 https://platform.deepseek.com/api_keys 创建密钥并确认账户可用余额。复制 .env.example 为 .env，填写 DEEPSEEK_API_KEY；默认地址为 https://api.deepseek.com，默认模型为 deepseek-v4-flash，也可改成 deepseek-v4-pro。旧的 CODING_AGENT_API_KEY/BASE_URL/MODEL 变量仍兼容。.env 已被 Git 忽略且不会自动加载；不要把密钥写入代码、README、截图或视频。
+API 接入：登录 https://platform.deepseek.com/api_keys 创建密钥并确认账户可用余额。复制 .env.example 为 .env，填写 DEEPSEEK_API_KEY；默认地址为 https://api.deepseek.com，默认模型为 deepseek-v4-flash，也可改成 deepseek-v4-pro。旧的 CODING_AGENT_API_KEY/BASE_URL/MODEL 变量仍兼容.
 
 检查配置：python main.py --config .env --check-config
 单次任务：python main.py --config .env --yes "检查项目并修复测试"
 交互模式：python main.py --config .env
 指定目录：python main.py --config 配置路径 --workspace 项目路径 "任务"
 运行测试：python -m unittest discover -v
-
 交互命令：:clear 清空上下文，:quit 退出。若接口返回 401/404/429，程序会提示检查 Key、地址、模型、权限或额度。
